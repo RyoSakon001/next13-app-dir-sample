@@ -1,6 +1,6 @@
-import { Todo } from "./types";
+import { Task } from "./types";
 
-export const getAllTodos = async (): Promise<Todo[]> => { // interfaceも忘れずに
+export const getAllTodos = async (): Promise<Task[]> => { // interfaceも忘れずに
   // SSG（cacheを必ず利用する＝最初にすべて読み込んでからcache化する）
   // const res = await fetch(`http://localhost:3001/tasks`, { cache: "force-cache", next: { revalidate: 5 } });
   // const res = await fetch(`http://localhost:3001/tasks`); // 何も書かなければforce-cache

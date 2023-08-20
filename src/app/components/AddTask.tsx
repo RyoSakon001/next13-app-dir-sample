@@ -1,6 +1,7 @@
 "use client";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { addTodo } from "../api";
+import { v4 as uuidv4 } from "uuid";
 
 const AddTask = () => {
   const [title, setTitle] = useState("");
@@ -8,7 +9,7 @@ const AddTask = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    await addTodo({ id: "4", text: title });
+    await addTodo({ id: uuidv4(), text: title });
 
     setTitle("");
   };
